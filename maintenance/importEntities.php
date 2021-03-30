@@ -118,7 +118,7 @@ class ImportEntities extends \Maintenance {
 
 	private function newEntityImporter() {
 		$entityImporterFactory = new EntityImporterFactory(
-			WikibaseRepo::getDefaultInstance()->getStore()->getEntityStore(),
+			WikibaseRepo::getStore()->getEntityStore(),
 			wfGetLB(),
 			$this->logger,
 			$this->getConfig()->get( 'WBImportSourceApi' )
