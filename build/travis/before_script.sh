@@ -58,7 +58,7 @@ echo '$wgLanguageCode = "en";' >> LocalSettings.php
 echo 'require_once __DIR__ . "/extensions/Wikibase/repo/Wikibase.php";' >> LocalSettings.php
 echo 'require_once __DIR__ . "/extensions/Wikibase/repo/ExampleSettings.php";' >> LocalSettings.php
 echo 'require_once __DIR__ . "/extensions/Wikibase/client/WikibaseClient.php";' >> LocalSettings.php
-echo 'require_once __DIR__ . "/extensions/WikibaseImport/WikibaseImport.php";' >> LocalSettings.php
+echo 'wfLoadExtension( "WikibaseImport" );' >> LocalSettings.php
 echo '$wgWBClientSettings["siteGlobalID"] = "enwiki";' >> LocalSettings.php
 
 php maintenance/update.php --quick
