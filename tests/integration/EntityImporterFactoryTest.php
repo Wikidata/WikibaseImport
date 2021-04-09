@@ -31,7 +31,7 @@ class EntityImporterFactoryTest extends \PHPUnit_Framework_TestCase {
 
 	private function newEntityImporterFactory() {
 		return new EntityImporterFactory(
-			WikibaseRepo::getDefaultInstance()->getStore()->getEntityStore(),
+			WikibaseRepo::getEntityStore(),
 			wfGetLB(),
 			$this->newLogger(),
 			'https://www.wikidata.org/w/api.php'
